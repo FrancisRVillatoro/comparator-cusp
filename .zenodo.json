@@ -14,9 +14,5 @@
     "genetic toggle switch", "mutual repression", "saddle-node bifurcation",
     "Whitney fold", "Whitney cusp", "imperfect pitchfork", "center manifold",
     "topological degree", "arbitrary-precision arithmetic", "reproducibility"
-  ],
-  "related_identifiers": [
-    {"identifier": "https://github.com/USER/comparator-cusp",
-     "relation": "isSupplementTo", "scheme": "url"}
   ]
 }
