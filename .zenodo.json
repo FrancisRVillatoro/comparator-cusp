@@ -1,0 +1,22 @@
+{
+  "title": "Reproducibility package for \"Global fold and cusp geometry of an asymmetric two-gene cross-repressive module\"",
+  "upload_type": "software",
+  "license": "MIT",
+  "creators": [
+    {
+      "name": "Villatoro, Francisco R.",
+      "affiliation": "Universidad de Malaga, Spain",
+      "orcid": "XXXX-XXXX-XXXX-XXXX"
+    }
+  ],
+  "description": "<p>Symbolic and arbitrary-precision verification scripts and figure-generating code for the manuscript <em>Global fold and cusp geometry of an asymmetric two-gene cross-repressive module</em> (submitted to SIAM Journal on Applied Dynamical Systems). Each script recomputes one group of statements of the paper: the exact singular set and the vanishing of det J on it, the sign identity of the tangency condition, the sum-of-squares identity and the bound behind uniqueness of the cusp, the slope identity behind the absence of self-intersections of the discriminant, the equilibrium counts across the discriminant, the closed-form center-manifold coefficients, and the analytic expansion of the fold about the cusp. Computations use 30 to 50 significant digits; double precision is insufficient near the cusp because of cancellation in the symmetry-breaking parameter.</p>",
+  "keywords": [
+    "genetic toggle switch", "mutual repression", "saddle-node bifurcation",
+    "Whitney fold", "Whitney cusp", "imperfect pitchfork", "center manifold",
+    "topological degree", "arbitrary-precision arithmetic", "reproducibility"
+  ],
+  "related_identifiers": [
+    {"identifier": "https://github.com/USER/comparator-cusp",
+     "relation": "isSupplementTo", "scheme": "url"}
+  ]
+}
