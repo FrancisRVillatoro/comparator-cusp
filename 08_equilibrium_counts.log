@@ -1,0 +1,7 @@
+m=(2,2) g=(0.018,0.018) R=1.0  Xc=1.01816 | a1(1-0.4%): 1 eq (1 node,0 saddle) | a1(1+0.4%): 3 eq (2 node,1 saddle)
+m=(3,2) g=(0.05,0.05) R=1.0  Xc=0.95586 | a1(1-0.4%): 1 eq (1 node,0 saddle) | a1(1+0.4%): 3 eq (2 node,1 saddle)
+m=(2,2) g=(0.05,0.2) R=1.0  Xc=1.09904 | a1(1-0.4%): 1 eq (1 node,0 saddle) | a1(1+0.4%): 3 eq (2 node,1 saddle)
+m=(4,1) g=(0.02,0.02) R=1.0  Xc=1.14165 | a1(1-0.4%): 1 eq (1 node,0 saddle) | a1(1+0.4%): 3 eq (2 node,1 saddle)
+m=(2,3) g=(0.0,0.0) R=1.0  Xc=0.77460 | a1(1-0.4%): 1 eq (1 node,0 saddle) | a1(1+0.4%): 3 eq (2 node,1 saddle)
+m=(2,2) g=(0.1,0.3) R=2.5  Xc=1.11155 | a1(1-0.4%): 1 eq (1 node,0 saddle) | a1(1+0.4%): 3 eq (2 node,1 saddle)
+m=(0.5,4) g=(0.1,0.1) R=1.0  Xc=3.42975 | a1(1-0.4%): 1 eq (1 node,0 saddle) | a1(1+0.4%): 3 eq (2 node,1 saddle)

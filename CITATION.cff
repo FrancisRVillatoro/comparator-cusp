@@ -1,0 +1,33 @@
+cff-version: 1.2.0
+title: >-
+  Reproducibility package for "Global fold and cusp geometry of an asymmetric
+  two-gene cross-repressive module"
+message: If you use this software, please cite both the software and the paper.
+type: software
+authors:
+  - family-names: Villatoro
+    given-names: Francisco R.
+    email: frvillatoro@uma.es
+    affiliation: Universidad de Malaga
+    orcid: 'https://orcid.org/XXXX-XXXX-XXXX-XXXX'
+license: MIT
+version: 1.0.0
+date-released: '2026-08-20'
+keywords:
+  - genetic toggle switch
+  - mutual repression
+  - fold and cusp singularities
+  - imperfect pitchfork
+  - center manifold
+  - topological degree
+preferred-citation:
+  type: article
+  title: >-
+    Global fold and cusp geometry of an asymmetric two-gene cross-repressive
+    module
+  authors:
+    - family-names: Villatoro
+      given-names: Francisco R.
+  year: 2026
+  journal: SIAM Journal on Applied Dynamical Systems
+  notes: Submitted

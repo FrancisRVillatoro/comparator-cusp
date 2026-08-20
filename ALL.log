@@ -1,0 +1,219 @@
+a_c  = q**(1 - n)*(q**n + 1)**2/n
+a_c should equal (1+q^n)^2/(n q^(n-1)): True
+u_rho - 1/(2(1+q^n)) =  0
+u_2 - ((n+1)q^n-(n-1))/(4q(1+q^n)) =  0
+A_mu simplified: (n - 1)/(2*q*(q**n + 1))
+A_mu - (n-1)/(2q(1+q^n)) =  0
+b - (n^2-1)/(12 q^2) =  0
+h - 1/(2(1+q^n)) =  0
+C_n - claimed =  2*sqrt(2)*((1 - n)*sqrt(n**2 - 1) + (n - 1)**(3/2)*sqrt(n + 1))/(3*sqrt(q)*sqrt(n + 1)*sqrt(n**2 - 1)*sqrt(q**n + 1))
+numerator of Phi' = n*z**(n - 2)*(-g*n + g*z**n + g + n*z)
+Phi(inf) = n
+======================================================================
+1.  Cusp point and reduced coefficients
+======================================================================
+g              = 0.018115942029
+q_c   (Phi=1)  = 1.01828002225
+q_c   (closed) = 1.01828002225
+|difference|   = 1.972e-31
+a_c            = 2.03722841775
+A_mu = 0.2410650824   b = 0.2411046364   h = 0.2454717575   C_n = 0.3779594981
+X_min (Phi=1/n, asymptote) = 0.589553869432
+
+======================================================================
+2.  det J on the curve Phi(X)Phi(Y)=1 (independent check)
+======================================================================
+X=1.2    Y=0.88477811     a1=2.107101     a2=2.114656     detJ=1.972e-31
+X=1.8    Y=0.71624195     a1=2.695995     a2=2.960054     detJ=-1.972e-31
+X=3.0    Y=0.63548079     a1=4.186076     a2=6.173648     detJ=-1.972e-31
+X=8.0    Y=0.59652804     a1=10.8222      a2=37.59679     detJ=9.861e-32
+
+======================================================================
+3.  Exact fold locus versus cubic normal form near the cusp
+======================================================================
+rho           |Delta a| exact    C_n rho^{3/2}      rel err     
+0.025139      0.00150655146      0.00150651192      2.624e-5    
+0.0028248     5.67452468e-5      5.67450191e-5      4.012e-6    
+0.00029423    1.90757008e-6      1.90756926e-6      4.306e-7    
+2.9818e-5     6.15413701e-8      6.15413674e-8      4.378e-8    
+2.9946e-6     1.95859454e-9      1.95859453e-9      4.398e-9    
+2.9986e-7     6.20620203e-11     6.20620203e-11     4.404e-10   
+2.9999e-8     1.96383472e-12     1.96383472e-12     4.406e-11   
+3.0003e-9     6.21145295e-14     6.21145295e-14     4.406e-12   
+3.0004e-10    1.96436015e-15     1.96436015e-15     4.41e-13    
+3.0005e-11    6.21197848e-17     6.21197848e-17     4.936e-14   
+3.0005e-12    1.96441271e-18     1.96441271e-18     2.724e-14   
+3.0005e-13    6.21203104e-20     6.21203104e-20     3.663e-12   
+3.0005e-14    1.96441796e-21     1.96441796e-21     8.561e-11   
+
+local slope d log(rel err) / d log(rho):
+   rho ~ 0.00282    slope = 0.859125
+   rho ~ 0.000294   slope = 0.986755
+   rho ~ 2.98e-5    slope = 0.998653
+   rho ~ 2.99e-6    slope = 0.999864
+   rho ~ 3.0e-7     slope = 0.999986
+   rho ~ 3.0e-8     slope = 0.999999
+   rho ~ 3.0e-9     slope = 1.0
+   rho ~ 3.0e-10    slope = 0.999686
+   rho ~ 3.0e-11    slope = 0.951079
+   rho ~ 3.0e-12    slope = 0.258063
+   rho ~ 3.0e-13    slope = -2.12859
+   rho ~ 3.0e-14    slope = -1.36867
+
+Sections 4 and 5 of an earlier draft (experimental slice, far field) are
+covered by 03_experimental_slice.py.
+valid fold-curve range: X in [0.714116, 2.05512], r_F in [0.91187554, 1.4011531]
+s_* = 1.45464906238  r_* = 1.40115482594
+
+r      exact s-      exact s+      NF s-         NF s+         err s-    err s+   
+1.39   1.482376      1.488841      1.482376      1.488841      3.74e-6%  9.69e-6% 
+1.35   1.58016       1.660236      1.580159      1.660261      1.59e-5%  0.00151% 
+1.3    1.712934      2.019836      1.712922      2.021059      0.000698% 0.0606%  
+1.25   1.866842      2.696055      1.866784      2.709946      0.00312%  0.515%   
+1.2    2.052889      4.493247      2.05271       4.648106      0.0087%   3.45%    
+
+fold point: X=1.8 Y=0.71624195 a1=2.6959951 a2=2.9600543
+  a1 -> a1(1-0.020):  1 equilibria
+  a1 -> a1(1-0.001):  1 equilibria
+  a1 -> a1(1+0.001):  3 equilibria
+  a1 -> a1(1+0.020):  3 equilibria
+
+X        Y              a1             a2/a1^n         
+10.0     0.594156307    13.50571       0.318962564     
+30.0     0.590221275    40.42641       0.315406386     
+100.0    0.58966324     134.7459       0.314821765     
+300.0    0.589581678    404.2576       0.314717755     
+1000.0   0.589561304    1347.558       0.314687967     
+predicted limit (X_min-g)/(1+X_min^n)^n = 0.314676251
+check against previously computed cusps
+  sym          X_c=1.05124922 Y_c=1.05124922 a1=2.107755 a2=2.107755  (#roots=1)
+  p=3,q=2      X_c=0.81948069 Y_c=0.95585738 a1=1.441493 a2=1.514185  (#roots=1)
+  asym leaks   X_c=1.09904457 Y_c=1.16922884 a1=2.483189 a2=2.139959  (#roots=1)
+  m1=4,m2=1    X_c=1.14164795 Y_c=0.71212502 a1=1.920402 a2=1.867871  (#roots=1)
+
+zero-leak closed form  Psi1(Xc)=(1+m1)/(1+m2)
+  m1=2    m2=2     #roots=1  X_c=1.0000000000 (pred 1.0000000000)  Y_c=1.0000000000 (pred 1.0000000000)
+  m1=2    m2=3     #roots=1  X_c=0.7745966692 (pred 0.7745966692)  Y_c=0.9283177667 (pred 0.9283177667)
+  m1=3    m2=2     #roots=1  X_c=0.9283177667 (pred 0.9283177667)  Y_c=0.7745966692 (pred 0.7745966692)
+  m1=4    m2=1.5   #roots=1  X_c=1.0000000000 (pred 1.0000000000)  Y_c=0.6299605249 (pred 0.6299605249)
+  m1=1    m2=4     #roots=1  X_c=0.6666666667 (pred 0.6666666667)  Y_c=1.1362193665 (pred 1.1362193665)
+  m1=0.6  m2=3     #roots=1  X_c=3.1748021039 (pred 3.1748021039)  Y_c=1.7099759467 (pred 1.7099759467)
+identity check, lhs - [(ab-1)^2+(a-b)^2] = 0
+number of cusp roots found, histogram: {1: 3132}
+max C over all cusp points = 0.67857143   at (m1,m2,g1,g2,Xc)=(0.4, 20, 0.0, 20.0, 1.8743952436988145)
+(m1,m2,g1,g2,X)                    H            kappa+phi'     identity err a1'         a2'        
+(2, 3, 0.05, 0.2, 0.7)             +0.683911    -1.046124      2.3e-41      -3.09625    -1.55872   
+(2, 3, 0.05, 0.2, 1.4)             -1.512861    +0.396503      0.0e+00      +1.05249    +1.17365   
+(3, 2, 0.05, 0.05, 0.8)            +1.060941    -1.649896      9.2e-41      -2.73535    -2.49464   
+(4, 1, 0.02, 0.02, 2.0)            -2.484118    +0.641334      0.0e+00      +1.26984    +10.90268  
+(2, 2, 0.018, 0.018, 0.8)          +0.698491    -1.831940      9.2e-41      -4.02661    -3.00438   
+(2, 2, 0.018, 0.018, 1.5)          -1.084157    +0.443540      2.9e-41      +1.01661    +1.44151   
+
+In every row sign(kappa+phi') = -sign(H) and a1', a2' share that sign.
+m=(2,3) g=(0.05,0.2) R=1 X=0.7 | S formula err=0.0e+00 | identity err=0.0e+00 | u=0.6107 D=-0.4443 u^2+Du+1=+1.10162
+m=(2,3) g=(0.05,0.2) R=1 X=1.4 | S formula err=0.0e+00 | identity err=0.0e+00 | u=1.2770 D=-0.5479 u^2+Du+1=+1.93115
+m=(4,1) g=(0.02,0.02) R=1 X=2.0 | S formula err=2.4e-35 | identity err=6.0e-36 | u=3.7271 D=-2.0000 u^2+Du+1=+7.43685
+m=(3,2) g=(0.05,0.05) R=1 X=0.8 | S formula err=7.5e-37 | identity err=0.0e+00 | u=0.9524 D=-0.2098 u^2+Du+1=+1.70720
+m=(2,2) g=(0.1,0.3) R=2.5 X=1.3 | S formula err=0.0e+00 | identity err=0.0e+00 | u=1.1599 D=-1.1897 u^2+Du+1=+0.96540
+m=(0.5,4) g=(0.1,0.1) R=1 X=3.0 | S formula err=4.7e-38 | identity err=1.6e-36 | u=0.3064 D=-3.3598 u^2+Du+1=+0.06437
+
+global monotonicity of S and separation of the two branches
+  m=(2   ,2   ) g=(0.018,0.018) R=1   : (m1-1)(m2-1)>=0 True  | S increasing True  | branches separated True
+  m=(2   ,3   ) g=(0.05,0.2 ) R=1   : (m1-1)(m2-1)>=0 True  | S increasing True  | branches separated True
+  m=(3   ,2   ) g=(0.05,0.05) R=1   : (m1-1)(m2-1)>=0 True  | S increasing True  | branches separated True
+  m=(4   ,1   ) g=(0.02,0.02) R=1   : (m1-1)(m2-1)>=0 True  | S increasing True  | branches separated True
+  m=(2   ,2   ) g=(0.1 ,0.3 ) R=2.5 : (m1-1)(m2-1)>=0 True  | S increasing True  | branches separated True
+  m=(6   ,0.5 ) g=(0.5 ,0.5 ) R=1   : (m1-1)(m2-1)>=0 False | S increasing False | branches separated True
+  m=(0.5 ,4   ) g=(0.1 ,0.1 ) R=1   : (m1-1)(m2-1)>=0 False | S increasing False | branches separated True
+  m=(1   ,8   ) g=(2.0 ,0.0 ) R=1   : (m1-1)(m2-1)>=0 True  | S increasing True  | branches separated True
+m=(2,2) g=(0.018,0.018) R=1.0  Xc=1.01816 | a1(1-0.4%): 1 eq (1 node,0 saddle) | a1(1+0.4%): 3 eq (2 node,1 saddle)
+m=(3,2) g=(0.05,0.05) R=1.0  Xc=0.95586 | a1(1-0.4%): 1 eq (1 node,0 saddle) | a1(1+0.4%): 3 eq (2 node,1 saddle)
+m=(2,2) g=(0.05,0.2) R=1.0  Xc=1.09904 | a1(1-0.4%): 1 eq (1 node,0 saddle) | a1(1+0.4%): 3 eq (2 node,1 saddle)
+m=(4,1) g=(0.02,0.02) R=1.0  Xc=1.14165 | a1(1-0.4%): 1 eq (1 node,0 saddle) | a1(1+0.4%): 3 eq (2 node,1 saddle)
+m=(2,3) g=(0.0,0.0) R=1.0  Xc=0.77460 | a1(1-0.4%): 1 eq (1 node,0 saddle) | a1(1+0.4%): 3 eq (2 node,1 saddle)
+m=(2,2) g=(0.1,0.3) R=2.5  Xc=1.11155 | a1(1-0.4%): 1 eq (1 node,0 saddle) | a1(1+0.4%): 3 eq (2 node,1 saddle)
+m=(0.5,4) g=(0.1,0.1) R=1.0  Xc=3.42975 | a1(1-0.4%): 1 eq (1 node,0 saddle) | a1(1+0.4%): 3 eq (2 node,1 saddle)
+Figure 1 checks (m1=2, m2=3, g1=0.05, g2R=0.20):
+  cusp (a1,a2) = (1.677443, 1.431864)
+  label "three equilibria" is centred at (7.10, 5.20); measured box
+  a1 in [5.68, 8.52], a2 in [5.12, 6.38].  Corner checks:
+      (7.10, 5.20): 3 equilibria
+      (5.68, 5.12): 3 equilibria
+      (5.68, 6.38): 3 equilibria
+      (8.52, 5.12): 3 equilibria
+      (8.52, 6.38): 3 equilibria
+  label "one equilibrium" is centred at (2.40, 7.40); its box spans about
+  measured box a1 in [0.51, 4.29], a2 in [7.32, 8.14].  Corner checks:
+      (2.40, 7.40): 1 equilibria
+      (0.51, 7.32): 1 equilibria
+      (0.51, 8.14): 1 equilibria
+      (4.29, 7.32): 1 equilibria
+      (4.29, 8.14): 1 equilibria
+
+Figure 3 checks (A=3, m_s=m=2, kappa_s=1.5, g=0.0181159):
+  cusp (s_*, r_*) = (1.454649062, 1.401154826)
+  label "bistable" starts at (1.95, 1.252); its box spans about
+  s in [1.95, 2.24], r in [1.252, 1.269].  Corner checks:
+      (s,r)=(1.95, 1.252): 3 equilibria
+      (s,r)=(1.95, 1.269): 3 equilibria
+      (s,r)=(2.24, 1.252): 3 equilibria
+      (s,r)=(2.24, 1.269): 3 equilibria
+  label "monostable" starts at (1.32, 1.21); box spans about
+  s in [1.32, 1.70], r in [1.20, 1.228].  Corner checks:
+      (s,r)=(1.32, 1.210): 1 equilibria
+      (s,r)=(1.70, 1.200): 1 equilibria
+      (s,r)=(1.70, 1.228): 1 equilibria
+
+figures written to figures
+==========================================================================
+(a) leading coefficients for symbolic Hill exponent
+==========================================================================
+  eta_2      = (m*q**m + q**m + 1)/(2*q*(q**m + 1))
+  claimed    = ((m+1)q^m + 1)/(2q(1+q^m))
+  difference = 0
+
+  rho(0) = 0    coefficient of d in Delta a = 0
+  r_2 = (m + 1)*(q**m + 1)/(2*q)
+  t_3 = -(m - 1)*(m + 1)*(q**m + 1)/(3*q**2)
+  r_2 - 3b/A_mu = 0
+  t_3 + 2b/h    = 0
+
+==========================================================================
+(b) Proposition 7.2: c_1 for m = 2 and arbitrary leak
+==========================================================================
+  r_2 = 3*(q**2 + 1)/(2*q)
+  r_4 = -(21*q**4 + 2*q**2 + 1)/(8*q**3*(q**2 + 1))
+  t_3 = -(q**2 + 1)/q**2
+  t_5 = (3*q**2 - 2*q + 1)*(3*q**2 + 2*q + 1)/(4*q**4*(q**2 + 1)) = 9*q**4/(4*q**6 + 4*q**4) + 2*q**2/(4*q**6 + 4*q**4) + 1/(4*q**6 + 4*q**4)
+  c_1 = (q - 1)*(q + 1)*(3*q**2 + 1)/(12*q*(q**2 + 1)**3)
+  c_1 - (q^2-1)(3q^2+1)/(12q(1+q^2)^3) = 0
+
+  numerical values quoted in the paper:
+    g = 0.001            c_1 = 8.320833344e-5     paper: 8.32083e-5
+    g = 0.018115942      c_1 = 0.001468649632     paper: 1.468650e-3
+    g = 0.2              c_1 = 0.01182662102      paper: 1.182662e-2
+    small-leak limit c_1/g = 0.08333333332   vs 1/12 = 0.08333333333
+
+==========================================================================
+(c) Corollary 7.3: zero-leak quadratic expansion
+==========================================================================
+  rho    = 565*e**6/8 - 123*e**5/4 + 27*e**4/2 - 6*e**3 + 3*e**2
+  Delta a= -441*e**7/4 + 173*e**6/4 - 33*e**5/2 + 6*e**4 - 2*e**3
+  |Delta a|/(C_2 rho^{3/2}) - 1 in powers of u = sqrt(rho):
+    29*u**6/3456 - 5*u**4/288    [expect  -5/288 u^4 + 29/3456 u^6]
+  5/288  = 0.017361111111111112    29/3456 = 0.008391203703703705
+
+==========================================================================
+(d) Remark 7.4: the cancellation is specific to m = 2
+==========================================================================
+  m = 3, arbitrary leak:  c_1 = 3*(2*q**6 - 2*q**3 - 1)/(16*q*(q + 1)**3*(q**2 - q + 1)**3)
+  claimed 3(2q^6-2q^3-1)/(16 q (1+q^3)^3), difference = 0
+
+  zero-leak values, q_c = (m-1)^(-1/m):
+    m = 2 :  c_1 = 0                          = 0
+    m = 3 :  c_1 = -2**(1/3)/12               = -0.1049934208
+    m = 4 :  c_1 = -39*3**(1/4)/200           = -0.2566344325
+    m = 5 :  c_1 = -8*2**(2/5)/25             = -0.4222425314
+    m = 6 :  c_1 = -19*5**(1/6)/42            = -0.5915606961
+
+  only m = 2 gives c_1 = 0, which is Corollary 7.3.

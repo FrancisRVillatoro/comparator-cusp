@@ -1,0 +1,32 @@
+Figure 1 checks (m1=2, m2=3, g1=0.05, g2R=0.20):
+  cusp (a1,a2) = (1.677443, 1.431864)
+  label "three equilibria" is centred at (7.10, 5.20); measured box
+  a1 in [5.68, 8.52], a2 in [5.12, 6.38].  Corner checks:
+      (7.10, 5.20): 3 equilibria
+      (5.68, 5.12): 3 equilibria
+      (5.68, 6.38): 3 equilibria
+      (8.52, 5.12): 3 equilibria
+      (8.52, 6.38): 3 equilibria
+  label "one equilibrium" is centred at (2.40, 7.40); its box spans about
+  measured box a1 in [0.51, 4.29], a2 in [7.32, 8.14].  Corner checks:
+      (2.40, 7.40): 1 equilibria
+      (0.51, 7.32): 1 equilibria
+      (0.51, 8.14): 1 equilibria
+      (4.29, 7.32): 1 equilibria
+      (4.29, 8.14): 1 equilibria
+
+Figure 3 checks (A=3, m_s=m=2, kappa_s=1.5, g=0.0181159):
+  cusp (s_*, r_*) = (1.454649062, 1.401154826)
+  label "bistable" starts at (1.95, 1.252); its box spans about
+  s in [1.95, 2.24], r in [1.252, 1.269].  Corner checks:
+      (s,r)=(1.95, 1.252): 3 equilibria
+      (s,r)=(1.95, 1.269): 3 equilibria
+      (s,r)=(2.24, 1.252): 3 equilibria
+      (s,r)=(2.24, 1.269): 3 equilibria
+  label "monostable" starts at (1.32, 1.21); box spans about
+  s in [1.32, 1.70], r in [1.20, 1.228].  Corner checks:
+      (s,r)=(1.32, 1.210): 1 equilibria
+      (s,r)=(1.70, 1.200): 1 equilibria
+      (s,r)=(1.70, 1.228): 1 equilibria
+
+figures written to figures
