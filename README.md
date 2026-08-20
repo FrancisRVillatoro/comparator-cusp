@@ -1,5 +1,7 @@
 # Global fold and cusp geometry of an asymmetric two-gene cross-repressive module
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.22027854.svg)](https://doi.org/10.5281/zenodo.22027854)
+
 Reproducibility package for
 
 > F. R. Villatoro, *Global fold and cusp geometry of an asymmetric two-gene
